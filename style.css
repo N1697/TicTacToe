@@ -1,0 +1,172 @@
+*{
+    background-color: #192a32;
+}
+
+#boardGame{
+    display: flex;
+    justify-content: center;
+}
+
+#gameContainer{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    width: 500px;
+}
+
+/*Tic Tac Toe*/
+#tictactoe{
+    color: #a8bec9;
+    font-size: 50px;
+}
+
+/*Cells Container*/
+#gridContainer{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 250px;
+    margin: auto;
+}
+
+/*Cells*/
+.cell{
+    width: 100px;
+    height: 100px;
+    transform: translateX(-100px);
+    border: 2px solid;
+    border-radius: 10px;
+    line-height: 100px;
+    font-size: 100px;
+    cursor: pointer;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 5px 5px 10px black;
+    background-color: #1f3540;
+
+    transition: 0.5s;
+}
+.cell:active{
+    box-shadow: 0px 0px 0px;
+}
+
+/*XO - Turn - Reset Button*/
+#footerContainer{
+    width: 95%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#XO{
+    display: inline;
+    font-size: 50px;
+    line-height: 50px;
+}
+#xSignHTML{
+    color: #31c4be;
+}
+#oSignHTML{
+    color: #f2b238;
+
+}
+
+#statusText{
+    color: #a8bec9;
+    font-size: 50px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0px 10px 10px black, 0px 10px 10px black, 0px 10px 10px black;
+}
+
+#restartBtn{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #a8bec9;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0px 10px 10px black, 0px 10px 10px black, 0px 10px 10px black;
+    transition: 0.5s;
+}
+#restartBtn:active{
+    box-shadow: 0px 0px 0px;
+}
+#restartBtn:hover{
+    transform: scale(1.1);
+}
+#resetIcon{
+    color: #192a32;
+    background-color: #a8bec9;
+    font-size: 50px;
+}
+
+/*xSign and oSign in JS file*/
+#xSign{
+    background-color: #1f3540;
+}
+#oSign{
+    background-color: #1f3540;
+}
+
+
+/*Media*/
+@media (max-width: 640px){
+
+    #boardGame{
+        margin-top: 50%;
+    }
+
+    #gameContainer{
+        width: 250px;
+        margin-left: 25%;
+    }
+
+    #tictactoe{
+        font-size: 25px;
+        transform: translateX(-20%);
+    }
+
+    #gridContainer{
+        width: 125px;
+    }
+
+    .cell{
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 50px;
+        margin: 5px;
+        padding: 5px;
+    }
+
+   
+
+    #footerContainer{
+        width: 75%;
+        margin-top: 10px;
+        transform: translateX(-10%);
+    }
+
+    #XO{
+        font-size: 25px;
+        line-height: 25px;
+        margin: 0px 10px;
+        padding: 10px;
+    }
+
+    #statusText{
+        font-size: 25px;
+        margin: 0px 10px;
+    }
+
+    #restartBtn{
+        font-size: 25px;
+        margin: 0px 10px;
+        padding: 10px;
+    }
+
+    #resetIcon{
+        font-size: 25px;
+    }
+}
